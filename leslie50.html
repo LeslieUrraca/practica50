@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ejemplo de JavaScript</title>
+  <meta charset="UTF-8">
+</head>
+<body>
+
+<script>
+  var salario=[];
+  var sueldo;
+  do {
+    sueldo=prompt('Ingrese su salaraio y escriba 0 para finalizar','');
+    sueldo=parseInt(sueldo);
+    if (sueldo!=0)
+      salario.push(sueldo);
+  } while (sueldo!=0);
+  
+  salario.sort(function(v1,v2) {
+    if (v1>v2)
+      return 1;
+    else
+      return -1;
+  });
+  salario.reverse();
+  document.write('Salariow ordenados de mayor a menor<br>');
+  for(f=0;f<salario.length;f++)
+  {
+    document.write(salario[f]+'<br>');
+  }
+</script>
+  
+</body>
+</html>
